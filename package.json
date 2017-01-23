@@ -1,0 +1,33 @@
+{
+  "name": "videogamesearch",
+  "version": "1.0.0",
+  "description": "Video Game Search tool",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bworkm/VideoGameSearch.git"
+  },
+  "keywords": [
+    "game",
+    "video",
+    "search",
+    "find",
+    "waldo"
+  ],
+  "author": "bbbj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bworkm/VideoGameSearch/issues"
+  },
+  "homepage": "https://github.com/bworkm/VideoGameSearch#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "express-request-proxy": "^2.0.0",
+    "pg": "^6.1.2"
+  }
+}
