@@ -13,6 +13,26 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 //***************************************************
 
+app.post('/game/insert', function(request, response) {
+
+  let client = new pg.Client(conString)
+
+  client.connect(function(err) {
+    if (err) console.error(err);
+
+    client.query(
+      // Done: Write the SQL query to insert a new record
+      `INSERT INTO games(name, genres, popularity, summary, videos)
+      VALUES ($1, $2, $3, $4, $5);`,
+      [request.body.name, request.body.genres, request.body.popularity, request.body.summary, request.body.videos], // Done: Get each value from the request's body
+      function(err) {
+        if (err) console.error(err);
+        client.end();
+      }
+    );
+  })
+  response.send('insert complete');
+});
 
 //***************************************************
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
