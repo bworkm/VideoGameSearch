@@ -21,10 +21,9 @@ app.post('/game/insert', function(request, response) {
     if (err) console.error(err);
 
     client.query(
-      // Done: Write the SQL query to insert a new record
-      `INSERT INTO games(name, genres, popularity, summary, videos)
-      VALUES ($1, $2, $3, $4, $5);`,
-      [request.body.name, request.body.genres, request.body.popularity, request.body.summary, request.body.videos], // Done: Get each value from the request's body
+      `INSERT INTO games(name, gameId, rank, thumbnail)
+      VALUES ($1, $2, $3, $4);`,
+      [request.body.name, request.body.gameId, request.body.rank, request.body.thumbnail],
       function(err) {
         if (err) console.error(err);
         client.end();
