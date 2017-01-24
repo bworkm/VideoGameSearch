@@ -20,7 +20,7 @@ app.post('/game/insert', function(request, response) {
   client.connect(function(err) {
     if (err) console.error(err);
 
-    client.query2(
+    client.query1(
       'CREAT TABLE IF NOT EXISTS games(' +
         'game_table_id INTEGER PRIMARY KEY, ' +
         'name VARCHAR(255) NOT NULL, ' +
@@ -29,22 +29,48 @@ app.post('/game/insert', function(request, response) {
         'thumbnail VARCHAR(255));',
       function(err) {
         if (err) console.error(err);
-        client.end();
+        queryTwo();
       }
-      query2();
     );
 
-    client.query2(
+    function queryTwo(){
+      client.query(
       `INSERT INTO games(name, gameId, rank, thumbnail)
       VALUES ($1, $2, $3, $4);`,
       [request.body.name, request.body.gameId, request.body.rank, request.body.thumbnail],
       function(err) {
         if (err) console.error(err);
         client.end();
+      });
+    }
+  })
+  response.send('insert complete');
+});
+app.get('/bgg/*', proxyBgg);
+
+function proxyBgg(request,response){
+  console.log('bgg request', request.params[0]);
+  (requestProxy({
+    url: `https://bgg-json.azurewebsites.net/${request.params[0]}`,
+  }))(request, response);
+}
+
+app.get('/game/all', function(request, response) {
+
+  let client = new pg.Client(conString)
+
+  client.connect(function(err) {
+    if (err) console.error(err);
+
+    client.query(
+      'SELECT * FROM games',
+      function(err, result) {
+        if (err) console.error(err);
+        response.send(result);
+        client.end();
       }
     );
   })
-  response.send('insert complete');
 });
 
 //***************************************************

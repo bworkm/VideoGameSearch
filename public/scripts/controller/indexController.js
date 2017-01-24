@@ -5,7 +5,7 @@
   Game.createTable();
 ///still working on this function
   indexController.index = function(ctx, next){
-    if(){
+    if(true){
 
     }
   }
