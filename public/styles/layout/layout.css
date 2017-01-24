@@ -1,20 +1,77 @@
-header {
-  border: 1px solid black;
-}
 #hero-img {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   width: 100%;
-  height: 20em;
+  height: 50vh;
 }
-ol#top-games {
+.page-lower {
   height: auto;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   text-align: center;
+
 }
 li {
   display: list-item;
   list-style-position: inside;
 }
-h2 {
-  display: inline;
+
+.heading-group-h1 {
+  text-align: center;
+  margin-top: 1em;
+}
+.heading-group-h1 > h1 {
+  font-family: fantasy;
+  font-size: 30pt;
+}
+.icon-menu {
+  font-size: 2em;
+  bottom: 1.1em;
+  right: 0.2em;
+  float: right;
+  position: relative;
+}
+.page-lower h2 {
+  font-size: 24pt;
+  margin: .5em 0;
+}
+.top-games {
+  margin: 0 auto;
+}
+.game-thumb {
+  width: 100%;
+}
+li h3 {
+  position: relative;
+  bottom: 2em;
+  font-size: 14pt;
+  height: 0;
+}
+footer {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  position: relative;;
+  bottom: 0;
+}
+@media only screen and (min-width: 440px) {
+  .icon-menu {
+    display: none;
+  }
+  .page-lower {
+    margin-top: 2em;
+  }
+  li {
+    width: 14em;
+    display: inline-block;
+    margin: 0 26px;
+  }
+  li h3 {
+    position: inherit;
+    height: auto;
+    width: 100%;
+  }
+  li:first-child {
+    margin-left: 0;
+  }
+  li:last-child {
+    margin-right: 0;
+  }
 }
