@@ -22,6 +22,10 @@ Game.fetchAll = (callback) => { //eslint-disable-line
   )
 };
 
+Game.createTable = callback => {
+
+}
+
 Game.prototype.insertRecord = (callback) => { //eslint-disable-line
   $.post('/game/insert', {name: this.name, gameId: this.gameId, rank: this.rank, thumbnail: this.thumbnail})
   .then(data => {
