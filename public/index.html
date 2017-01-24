@@ -5,32 +5,81 @@
     <title>Video Game Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendors/styles/reset.css">
+    <link rel="stylesheet" href="vendors/styles/icons.css">
     <link rel="stylesheet" href="styles/base/base.css">
     <link rel="stylesheet" href="styles/layout/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
-
+    <script id="top-games-template" type="text/x-handlebars-template">
+      <li>
+        <img src="{{image}}">
+        <h2>{{title}}</h2>
+      </li>
+    </script>
   </head>
   <body>
+    <header>
+      <nav class="main-nav">
+        <h1>Where's Waldo</h1>
+        <section class="icon-menu">
+          <!-- <div class="sb-search">
+            <form action="">
+              <input type="search" class="sb-search-input" placeholder="Find Waldo" name="search" id="search">
+              <input type="submit" class="sb-search-submit" value="">
+              <span class="sb-search-icon"></span>
+            </form>
+          </div> -->
+          <a href="">About Us</a>
+        </section>
+      </nav>
+    </header>
+    <main class="">
+      <img src="" id="hero-img" alt="Top rated game hero image">
+      <section id="page-lower">
+
+      <table id="top-games" class="top-games"><h1>Top Games</h1>
+        <tr>
+          <td><img src="https://placehold.it/50x50"></td>
+          <td><h2>Game 1</h2></td>
+        </tr>
+        <tr>
+          <td><img src="https://placehold.it/50x50"></td>
+          <td><h2>Game 2</h2></td>
+        </tr>
+        <tr>
+          <td><img src="https://placehold.it/50x50"></td>
+          <td><h2>Game 3</h2></td>
+        </tr>
+        <tr>
+          <td><img src="https://placehold.it/50x50"></td>
+          <td><h2>Game 4</h2></td>
+        </tr>
+        <tr>
+          <td><img src="https://placehold.it/50x50"></td>
+          <td><h2>Game 5</h2></td>
+        </tr>
+      </table>
+      </section>
+    </main>
     <footer>
-      &copy; 2016 Free use of IGDB API
+      &copy; 2016 - Brian Alspach | Brian Workman | Braelynn Luedtke | Jay Balderas
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/vendor/scripts/handlebars.js"></script>
-    <script src="/vendor/scripts/page.js"></script>
+    <script src="./vendors/scripts/handlebars.js"></script>
+    <script src="./vendors/scripts/page.js"></script>
 
-    <script src="/scripts/model/gameModel.js"></script>
-    <script src="/scripts/model/searchModel.js"></script>
+    <script src="./scripts/model/gameModel.js"></script>
+    <script src="./scripts/model/searchModel.js"></script>
 
-    <script src="/scripts/view/aboutView.js"></script>
-    <script src="/scripts/view/gameView.js"></script>
-    <script src="/scripts/view/indexView.js"></script>
-    <script src="/scripts/view/searchView.js"></script>
+    <script src="./scripts/view/aboutView.js"></script>
+    <script src="./scripts/view/gameView.js"></script>
+    <script src="./scripts/view/indexView.js"></script>
+    <script src="./scripts/view/searchView.js"></script>
 
-    <script src="/scripts/controller/aboutController.js"></script>
-    <script src="/scripts/controller/gameController.js"></script>
-    <script src="/scripts/controller/searchController.js"></script>
-    <script src="/scripts/controller/indexController.js"></script>
-    <script src="/scripts/controller/route.js"></script>
+    <script src="./scripts/controller/aboutController.js"></script>
+    <script src="./scripts/controller/gameController.js"></script>
+    <script src="./scripts/controller/searchController.js"></script>
+    <script src="./scripts/controller/indexController.js"></script>
+    <script src="./scripts/controller/route.js"></script>
   </body>
 </html>
