@@ -13,20 +13,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 //***************************************************
 
-app.post('/game/insert', function(request, response) {
+app.post('/game/insert', (request, response) => {
 
-  let client = new pg.Client(conString)
+  let client = new pg.Client(conString);
 
   client.connect(function(err) {
     if (err) console.error(err);
 
     client.query1(
-      'CREAT TABLE IF NOT EXISTS games(' +
-        'game_table_id INTEGER PRIMARY KEY, ' +
-        'name VARCHAR(255) NOT NULL, ' +
-        'gameId INTEGER NOT NULL, ' +
-        'rank INTEGER, ' +
-        'thumbnail VARCHAR(255));',
+      'CREATE TABLE IF NOT EXISTS games(' +
+      'game_table_id INTEGER PRIMARY KEY, ' +
+      'name VARCHAR(255) NOT NULL, ' +
+      'gameId INTEGER NOT NULL, ' +
+      'rank INTEGER, ' +
+      'thumbnail VARCHAR(255));',
       function(err) {
         if (err) console.error(err);
         queryTwo();
@@ -39,6 +39,7 @@ app.post('/game/insert', function(request, response) {
       VALUES ($1, $2, $3, $4);`,
       [request.body.name, request.body.gameId, request.body.rank, request.body.thumbnail],
       function(err) {
+
         if (err) console.error(err);
         client.end();
       });

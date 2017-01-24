@@ -1,5 +1,6 @@
 'use strict';
 
+
 //vars from Jay Game Cosntructor and Game.all
 (function(module){
 
@@ -8,6 +9,38 @@
   }
 
   Game.allGames =[];
+//vars from Jay Game Cosntructor and Game.all
+
+  Game.fetchAll = (callback) => { //eslint-disable-line
+    $.ajax('/game/all')
+      .then(
+        function(results){
+          if(results.rows.length) {
+            Game.loadAll(results.rows); //eslint-disable-line
+            callback();
+          } else {
+            $.get('https://bgg-json.azurewebsites.net/hot')
+            .then(data => {
+              JSON.parse(data).forEach(item => {
+                let game = new Game(item); //eslint-disable-line
+                game.insertRecord();
+              })
+            })
+          }
+        }
+    )
+  };
+
+  Game.prototype.insertRecord = (callback) => { //eslint-disable-line
+    $.post('/game/insert', {name: this.name, gameId: this.gameId, rank: this.rank, thumbnail: this.thumbnail})
+    .then(data => {
+      console.log(data);
+      if(callback) callback();
+    });
+  }
+
+
+
 
   Game.loadAll = data => {
     data.forEach(element => {
