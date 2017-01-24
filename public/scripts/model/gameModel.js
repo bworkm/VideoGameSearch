@@ -1,6 +1,5 @@
 'use strict';
 
-
 //vars from Jay Game Cosntructor and Game.all
 (function(module){
 
@@ -9,38 +8,26 @@
   }
 
   Game.allGames =[];
+  Game.allGamesDetailed = [];
 //vars from Jay Game Cosntructor and Game.all
 
-  Game.fetchAll = (callback) => { //eslint-disable-line
-    $.ajax('/game/all')
-      .then(
-        function(results){
-          if(results.rows.length) {
-            Game.loadAll(results.rows); //eslint-disable-line
-            callback();
-          } else {
-            $.get('https://bgg-json.azurewebsites.net/hot')
-            .then(data => {
-              JSON.parse(data).forEach(item => {
-                let game = new Game(item); //eslint-disable-line
-                game.insertRecord();
-              })
-            })
-          }
-        }
-    )
-  };
-
-  Game.prototype.insertRecord = (callback) => { //eslint-disable-line
-    $.post('/game/insert', {name: this.name, gameId: this.gameId, rank: this.rank, thumbnail: this.thumbnail})
+  Game.prototype.insertRecord = function(callback) { //eslint-disable-line
+    $.post('/game/insert', {
+      name: this.name,
+      description: this.description,
+      game_id: this.gameId,
+      rank: this.rank,
+      thumbnail: this.thumbnail,
+      image: this.image,
+      minPlayers: this.minPlayers,
+      maxPlayers: this.maxPlayers,
+      playingTime: this.playingTime
+    })
     .then(data => {
       console.log(data);
       if(callback) callback();
     });
   }
-
-
-
 
   Game.loadAll = data => {
     data.forEach(element => {
@@ -52,30 +39,28 @@
     $.get('/game/all') // Done path not yet defined.
     .then(
       function(results){
-        console.log(results);
-        if(results.rows.length) {
+        if(!results.rows) {
+          console.log(results.rows, 'games exist in postgres db');
           Game.loadAll(results.rows); //eslint-disable-line
           callback();
         } else {
           $.get('/bgg/hot')
           .then(data => {
-            JSON.parse(data).forEach(item => {
-              let game = new Game(item); //eslint-disable-line
-              game.insertRecord();
+            console.log(data, 'data var from bgg');
+            data.forEach(function(item) {
+              console.log(item.gameId, 'gameId');
+              $.get(`/bgg/thing/${item.gameId}`)
+              .then(newdata => {
+                console.log(newdata, 'new data');
+                let game = new Game(newdata); //eslint-disable-line
+                game.insertRecord();
+              })
             })
           })
         }
       }
     )
   };
-
-  Game.prototype.insertRecord = (callback) => { //eslint-disable-line
-    $.post('/game/insert', {name: this.name, gameId: this.gameId, rank: this.rank, thumbnail: this.thumbnail})
-    .then(data => {
-      console.log(data);
-      if(callback) callback();
-    });
-  }
 
   module.Game = Game;
 })(window)

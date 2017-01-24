@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const conString = process.env.DATABASE_URL || 'postgres://localhost:5432';
+const conString = process.env.DATABASE_URL || 'postgres://postgres:bobistheshit@localhost:5432/bwork';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,13 +20,17 @@ app.post('/game/insert', (request, response) => {
   client.connect(function(err) {
     if (err) console.error(err);
 
-    client.query1(
-      'CREATE TABLE IF NOT EXISTS games(' +
-      'game_table_id INTEGER PRIMARY KEY, ' +
-      'name VARCHAR(255) NOT NULL, ' +
-      'gameId INTEGER NOT NULL, ' +
-      'rank INTEGER, ' +
-      'thumbnail VARCHAR(255));',
+    client.query(
+      `CREATE TABLE IF NOT EXISTS games(
+      name VARCHAR(255) NOT NULL,
+      description VARCHAR,
+      game_id INTEGER PRIMARY KEY NOT NULL,
+      rank INTEGER,
+      thumbnail VARCHAR(255),
+      image VARCHAR,
+      minPlayers INTEGER,
+      maxPlayers INTEGER,
+      playingTime INTEGER);`,
       function(err) {
         if (err) console.error(err);
         queryTwo();
@@ -35,9 +39,19 @@ app.post('/game/insert', (request, response) => {
 
     function queryTwo(){
       client.query(
-      `INSERT INTO games(name, gameId, rank, thumbnail)
-      VALUES ($1, $2, $3, $4);`,
-      [request.body.name, request.body.gameId, request.body.rank, request.body.thumbnail],
+      `INSERT INTO games(name, description, game_id, rank, thumbnail, image, minPlayers, maxPlayers, playingTime)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);`,
+      [
+        request.body.name,
+        request.body.description,
+        request.body.game_id,
+        request.body.rank,
+        request.body.thumbnail,
+        request.body.image,
+        request.body.minPlayers,
+        request.body.maxPlayers,
+        request.body.playingTime
+      ],
       function(err) {
 
         if (err) console.error(err);
@@ -72,6 +86,10 @@ app.get('/game/all', function(request, response) {
       }
     );
   })
+});
+
+app.get('*', (request, response) => {
+  response.sendFile('index.html', {root: './public'});
 });
 
 //***************************************************
