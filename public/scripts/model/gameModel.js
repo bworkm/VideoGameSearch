@@ -1,4 +1,4 @@
-
+'use strict';
 
 //vars from Jay Game Cosntructor and Game.all
 
@@ -33,3 +33,16 @@ Game.prototype.insertRecord = (callback) => { //eslint-disable-line
     if(callback) callback();
   });
 }
+
+(function(module){
+
+  function Game(opts){
+    Object.keys(opts).forEach(function(e, index, keys) {
+      this[e] = opts[e];
+    }, this);
+  }
+
+  Game.allGames =[];
+
+
+})
