@@ -39,7 +39,7 @@
     $.get('/game/all') // Done path not yet defined.
     .then(
       function(results){
-        if(results.rows) {
+        if(!results.rows) {
           console.log(results.rows, 'games exist in postgres db');
           Game.loadAll(results.rows); //eslint-disable-line
           callback();
