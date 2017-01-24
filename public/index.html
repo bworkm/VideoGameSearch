@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="styles/layout/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
-      <li>
-        <a href="{{url}}"><img class="game-thumb" src="{{image}}">
-        <h3>{{title}}</h3></a>
+      <li id="{{game_id}}">
+        <a href="gameview/{{game_id}}"><img class="game-thumb" src="{{thumbnail}}">
+        <h3>{{name}}</h3></a>
       </li>
     </script>
   </head>
@@ -66,17 +66,14 @@
     <script src="./vendors/scripts/page.js"></script>
 
     <script src="./scripts/model/gameModel.js"></script>
-    <script src="./scripts/model/searchModel.js"></script>
 
     <script src="./scripts/view/aboutView.js"></script>
     <script src="./scripts/view/gameView.js"></script>
     <script src="./scripts/view/indexView.js"></script>
-    <script src="./scripts/view/searchView.js"></script>
 
     <script src="./scripts/controller/aboutController.js"></script>
     <script src="./scripts/controller/gameController.js"></script>
-    <script src="./scripts/controller/searchController.js"></script>
     <script src="./scripts/controller/indexController.js"></script>
-    <script src="./scripts/controller/route.js"></script>
+    <!-- <script src="./scripts/controller/route.js"></script> -->
   </body>
 </html>
