@@ -11,57 +11,53 @@
     <link rel="stylesheet" href="styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
       <li>
-        <img src="{{image}}">
-        <h2>{{title}}</h2>
+        <img class="game-thumb" src="{{image}}">
+        <h3>{{title}}</h3>
       </li>
     </script>
   </head>
   <body>
     <header>
-      <nav class="main-nav">
+      <section class="heading-group-h1">
         <h1>Where's Waldo</h1>
-        <section class="icon-menu">
-          <!-- <div class="sb-search">
-            <form action="">
-              <input type="search" class="sb-search-input" placeholder="Find Waldo" name="search" id="search">
-              <input type="submit" class="sb-search-submit" value="">
-              <span class="sb-search-icon"></span>
-            </form>
-          </div> -->
-          <a href="">About Us</a>
-        </section>
+      </section>
+      <nav class="main-nav">
+        <div class="icon-menu">
+          <!-- <ul>
+            <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
+          </ul> -->
+        </div>
       </nav>
     </header>
     <main class="">
-      <img src="" id="hero-img" alt="Top rated game hero image">
-      <section id="page-lower">
-
-      <table id="top-games" class="top-games"><h1>Top Games</h1>
-        <tr>
-          <td><img src="https://placehold.it/50x50"></td>
-          <td><h2>Game 1</h2></td>
-        </tr>
-        <tr>
-          <td><img src="https://placehold.it/50x50"></td>
-          <td><h2>Game 2</h2></td>
-        </tr>
-        <tr>
-          <td><img src="https://placehold.it/50x50"></td>
-          <td><h2>Game 3</h2></td>
-        </tr>
-        <tr>
-          <td><img src="https://placehold.it/50x50"></td>
-          <td><h2>Game 4</h2></td>
-        </tr>
-        <tr>
-          <td><img src="https://placehold.it/50x50"></td>
-          <td><h2>Game 5</h2></td>
-        </tr>
-      </table>
+      <img src="https://placehold.it/1351x228" id="hero-img" alt="Top rated game hero image">
+      <section id="page-lower" class="page-lower">
+        <ul id="top-games" class="top-games">
+          <li>
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 1</h3>
+          </li>
+          <li>
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 2</h3>
+          </li>
+          <li>
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 3</h3>
+          </li>
+          <li>
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 4</h3>
+          </li>
+          <li>
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 5</h3>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>
-      &copy; 2016 - Brian Alspach | Brian Workman | Braelynn Luedtke | Jay Balderas
+      &copy; 2016 - Brian A. | Brian W. | Braelynn L. | Jay B.
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
