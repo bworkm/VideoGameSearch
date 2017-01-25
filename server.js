@@ -88,9 +88,13 @@ app.get('/game/all', function(request, response) {
   })
 });
 
+<<<<<<< HEAD
+app.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
+=======
 app.get('/about', (request, response) => {
   response.sendFile('index.html', {root: './public'});
 });
+>>>>>>> 401fd43d8373599d84b8845a6ef32421a160453e
 
 //***************************************************
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
