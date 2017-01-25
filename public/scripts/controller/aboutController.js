@@ -2,8 +2,8 @@
   const aboutController = {};
 
   aboutController.init = () => {
-    $('.page-lower').hide();
-    $('#about').fadeIn();
+    console.log('aboutController happened');
+    $('#about').fadeIn().siblings().hide();
   }
 
   module.aboutController=aboutController;
