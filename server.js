@@ -94,5 +94,9 @@ app.get('/about', (request, response) => {
   response.sendFile('index.html', {root: './public'});
 });
 
+app.get('/', (request, response) => {
+  responose.sendFile('index.html', {root: '.public'});
+});
+
 //***************************************************
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
