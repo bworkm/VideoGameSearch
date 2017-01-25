@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const conString = process.env.DATABASE_URL || 'postgres://postgres:bobistheshit@localhost:5432/bwork';
+const conString = process.env.DATABASE_URL || 'postgres://postgres:@localhost:5432';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
