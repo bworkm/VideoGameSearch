@@ -45,7 +45,7 @@
       function(results){
         if(results.rows) {
           Game.loadAll(results.rows); //eslint-disable-line
-          callback();  //This callback might not be needed.
+          callback();
         } else {
           $.get('/bgg/hot')
           .then(data => {

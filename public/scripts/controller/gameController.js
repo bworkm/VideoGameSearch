@@ -3,10 +3,15 @@
 (function(module) {
   const gameController = {};
 
-  gameController.index = () => {
+  gameController.init = () => {
     Game.fetchAll(gameView.initIndexPage);
   }
-  
-  gameController.index();
+
+  gameController.articles = () =>{
+    gameView.displayArticles();
+  }
+
+  gameController.init();
+
   module.gameController = gameController;
 })(window);
