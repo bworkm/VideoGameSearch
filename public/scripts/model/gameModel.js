@@ -7,8 +7,7 @@
     Object.keys(opts).forEach(e => this[e] = opts[e]);
   }
 
-  Game.allGames =[];
-  Game.allGamesDetailed = [];
+  Game.allGames = [];
 //vars from Jay Game Cosntructor and Game.all
 
   Game.prototype.insertRecord = function(callback) { //eslint-disable-line
@@ -28,10 +27,15 @@
       if(callback) callback();
     });
   }
+  Game.prototype.toHtml = function() {
+    let template = Handlebars.compile($('#game-info-template').html());
+
+    return template(this);
+  }
 
   Game.loadAll = data => {
     data.forEach(element => {
-      Game.allGames.push(element);
+      Game.allGames = data.map(ele => new Game(ele));
     });
   };
 
