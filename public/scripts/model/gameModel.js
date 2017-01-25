@@ -44,9 +44,8 @@
     .then(
       function(results){
         if(results.rows) {
-          console.log(results.rows, 'games exist in postgres db');
           Game.loadAll(results.rows); //eslint-disable-line
-          callback();
+          callback();  //This callback might not be needed.
         } else {
           $.get('/bgg/hot')
           .then(data => {

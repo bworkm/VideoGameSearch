@@ -4,5 +4,4 @@
 page('/about', aboutController.init);
 page('/gameView/:id', gameView.displayArticles);
 
-
 page();
