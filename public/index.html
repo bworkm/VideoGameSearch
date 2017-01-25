@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
       <li id="{{game_id}}" class="top-games-li">
-        <a href="gameview/{{game_id}}"><img class="game-thumb" src="{{thumbnail}}">
+        <a href="gameview/{{game_id}}"><img class="game-thumb" src="{{image}}">
         <h3>{{name}}</h3></a>
       </li>
     </script>
@@ -56,6 +56,7 @@
       <section id="page-lower" class="page-lower">
         <ul id="index" class="top-games">
         </ul>
+        <button id="display-all">Display All</button>
         <div id="game_info" class="game_info">
         </div>
       </section>

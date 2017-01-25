@@ -13,6 +13,19 @@
       }
     })
     .map(template));
+
+    $('#display-all').on('click', displayButton);
+  }
+
+  displayButton = () => {
+    let template = Handlebars.compile($('#top-games-template').html());
+
+    $('#index').append(Game.allGames.filter(function(e){
+      if (e.rank < 0 || e.rank > 13) {
+        return true;
+      }
+    })
+    .map(template));
   }
 
   //hero image slider code///////////////
