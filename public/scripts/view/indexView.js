@@ -2,7 +2,6 @@
 
   const indexView ={};
 
-  //function used in indexController to show topGames and hide siblings
   indexView.initIndexPage = () => {
     let template = Handlebars.compile($('#top-games-template').html());
 
@@ -16,6 +15,33 @@
     .map(template));
   }
 
-  module.indexView = indexView;
+  //hero image slider code///////////////
+  var sliderMain = function() {
+
+	  	$('#hero .flexslider').flexslider({
+			animation: "fade",
+			slideshowSpeed: 3000
+	  	});
+
+	  	$('#hero .flexslider .slides > li').css('height', $(window).height());
+	  	$(window).resize(function(){
+	  		$('#hero .flexslider .slides > li').css('height', $(window).height());
+	  	});
+
+	};
+
+	// var sliderSayings = function() {
+	// 	$('#fh5co-sayings .flexslider').flexslider({
+	// 		animation: "slide",
+	// 		slideshowSpeed: 3000,
+	// 		directionNav: false,
+	// 		controlNav: true,
+	// 		smoothHeight: true,
+	// 		reverse: true
+	//   	});
+	// }
+
+  sliderMain();
+  module.indexView= indexView;
 
 })(window);

@@ -18,8 +18,8 @@
     <script id="game-info-template" type="text/x-handlebars-template">
       <article class="hidden" id="{{game_id}}">
         <h3>This is {{name}}</h3>
-        <div>{{description}}</div>
-        <img src=`https:{{image}}`>
+        <span>{{description}}</span>
+        <img src="https://">
       </article>
     </script>
   </head>
@@ -43,10 +43,17 @@
         </div>
       </nav>
     </header>
-    <main class="">
-      <img src="https://placehold.it/1351x228" id="hero-img" alt="Top rated game hero image">
+    <main id="hero" class="">
+      <div class="flexslider" id="hero-img">
+
+  			  	<ul class="slides">
+  			   	<li style="background-image: url(https://placehold.it/1351x228);" data-stellar-background-ratio="0.5"></li>
+  			   	<li style="background-image: url(http://d2rormqr1qwzpz.cloudfront.net/photos/2013/03/19/46153-collection.jpg);" data-stellar-background-ratio="0.5"></li>
+  			   	<li style="background-image: url(https://shopswell-com-prod.s3.amazonaws.com/assets/1e282f01-d864-46f9-9e13-3045de6ce0db/board-games-3.jpg);" data-stellar-background-ratio="0.5"></li>
+  			  	</ul>
+      </div>
+
       <section id="page-lower" class="page-lower">
-        <h2>Top Games</h2>
         <ul id="index" class="top-games">
         </ul>
         <div id="game_info" class="game_info">
@@ -80,6 +87,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./vendors/scripts/jquery.flexslider-min.js"></script>
     <script src="./vendors/scripts/handlebars.js"></script>
     <script src="./vendors/scripts/page.js"></script>
 

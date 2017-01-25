@@ -5,7 +5,5 @@
   gameController.index = () => {
     Game.fetchAll(gameView.initIndexPage);
   }
-
-
   module.gameController = gameController;
 })(window);

@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const conString = process.env.DATABASE_URL || 'postgres://postgres:password@localhost:5432/brae';
+const conString = process.env.DATABASE_URL || 'postgres://postgres:@localhost:5432';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -87,6 +87,8 @@ app.get('/game/all', function(request, response) {
     );
   })
 });
+
+app.get('/gameView/*', (request, response) => response.sendFile('index.html', {root: './public'}));
 
 app.get('/about', (request, response) => {
   response.sendFile('index.html', {root: './public'});
