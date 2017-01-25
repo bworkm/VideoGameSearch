@@ -2,8 +2,6 @@
 
 (function(module) {
   const gameView = {};
-
-
   gameView.displayArticles = () => {
     $('#top-games li').on('click', (e) => {
       console.log($(e.target).parent().parent(),'parent of parent');
@@ -23,6 +21,5 @@
 
   gameView.initIndexPage();
   gameView.displayArticles();
-
   module.gameView = gameView;
 })(window);
