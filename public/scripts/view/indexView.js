@@ -4,15 +4,18 @@
 
   //function used in indexController to show topGames and hide siblings
   indexView.initIndexPage = () => {
-    $('#top-games').show().siblings().hide();
+    let template = Handlebars.compile($('#top-games-template').html());
 
-    Game.topGames.
+    // filter to 5 games
 
-
-    }
+    $('#index').append(Game.allGames.filter(function(e){
+      if (e.rank < 6 && e.rank > 0) {
+        return true;
+      }
+    })
+    .map(template));
+  }
 
   module.indexView = indexView;
 
 })(window);
-
-// /games/insert
