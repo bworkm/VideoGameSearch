@@ -9,7 +9,7 @@
   text-align: center;
 
 }
-li {
+.top-games-li {
   display: list-item;
   list-style-position: inside;
 }
@@ -24,10 +24,10 @@ li {
 }
 .icon-menu {
   font-size: 2em;
-  bottom: 1.1em;
-  right: 0.2em;
-  float: right;
-  position: relative;
+  /*bottom: 1.1em;
+  right: 0.2em;*/
+  /*float: right;*/
+  /*position: relative;*/
 }
 .page-lower h2 {
   font-size: 24pt;
@@ -39,7 +39,7 @@ li {
 .game-thumb {
   width: 100%;
 }
-li h3 {
+.top-games-li h3 {
   position: relative;
   bottom: 2em;
   font-size: 14pt;
@@ -51,27 +51,74 @@ footer {
   position: relative;;
   bottom: 0;
 }
-@media only screen and (min-width: 440px) {
+.tab{
+  display: inline;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.tab a{
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+.icon-menu ul{
+  display: none;
+}
+
+.icon-menu:hover ul{
+  display: inline;
+}
+
+.browser-nav{
+  display: none;
+}
+@media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
   }
+  .browser-nav{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-bottom: 1em;
+  }
+
+  .browser-tab{
+    display: inline;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .browser-tab a{
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+  }
+
+
   .page-lower {
     margin-top: 2em;
   }
-  li {
+  .top-games-li {
     width: 14em;
     display: inline-block;
     margin: 0 26px;
   }
-  li h3 {
+  .top-games-li h3 {
     position: inherit;
     height: auto;
     width: 100%;
   }
-  li:first-child {
+  .top-games-li:first-child {
     margin-left: 0;
   }
-  li:last-child {
+  .top-games-li:last-child {
     margin-right: 0;
   }
+}
+
+header {
+  padding-top: 1em;
 }

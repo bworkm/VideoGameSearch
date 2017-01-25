@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/layout/layout.css">
     <link rel="stylesheet" href="styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
-      <li id="{{game_id}}">
+      <li id="{{game_id}}" class="top-games-li">
         <a href="gameview/{{game_id}}"><img class="game-thumb" src="{{thumbnail}}">
         <h3>{{name}}</h3></a>
       </li>
@@ -30,20 +30,74 @@
       </section>
       <nav class="main-nav">
         <div class="icon-menu">
-          <!-- <ul>
-            <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-          </ul> -->
+          <ul class="main-nav-list">
+            <li class="tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
+            <li class="tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
+          </ul>
+        </div>
+        <div class="browser-nav">
+          <ul>
+            <li class="browser-tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
+            <li class="browser-tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
+          </ul>
         </div>
       </nav>
     </header>
     <main class="">
       <img src="https://placehold.it/1351x228" id="hero-img" alt="Top rated game hero image">
       <section id="page-lower" class="page-lower">
+<<<<<<< HEAD
         <ul id="top-games" class="top-games">
           <h2>Top Games</h2>
+=======
+        <h2>Top Games</h2>
+        <ul id="index" class="top-games">
+          <li class="top-games-li">
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 1</h3>
+          </li>
+          <li class="top-games-li">
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 2</h3>
+          </li>
+          <li class="top-games-li">
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 3</h3>
+          </li>
+          <li class="top-games-li">
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 4</h3>
+          </li>
+          <li class="top-games-li">
+            <img class="game-thumb" src="https://placehold.it/440x228">
+            <h3>Game 5</h3>
+          </li>
+>>>>>>> master
         </ul>
         <div id="game_info" class="game_info">
         </div>
+      </section>
+      <section id="about" class="page-lower">
+        <article class="bio">
+          <img class="bio-image" src="images/brianbio.jpg" alt="">
+          <h1>Brae L.</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nibh. Aliquam hendrerit lacus at felis vulputate sollicitudin. Quisque sodales, metus sit amet condimentum malesuada, ligula est luctus nisl, pulvinar sodales lacus enim et purus. Etiam vel dui maximus, lobortis quam ac, eleifend diam. Donec quis massa vitae ipsum egestas congue. Sed suscipit quis neque ut mattis. Maecenas luctus augue et aliquam fringilla. Fusce non iaculis est. Vestibulum scelerisque orci ac blandit pellentesque. Etiam et erat mattis, egestas nisl non, faucibus turpis. Fusce a ligula mattis, aliquam erat sed, ornare nisl. Sed ultricies nulla eu lacus dapibus pulvinar. Phasellus sit amet mi quis ex tempus accumsan ut et lacus. Morbi at scelerisque tortor. Aenean porta semper augue nec aliquam.</p>
+        </article>
+        <article class="bio">
+          <img class="bio-image" src="images/brianbio.jpg" alt="">
+          <h1>Brian Alspach</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nibh. Aliquam hendrerit lacus at felis vulputate sollicitudin. Quisque sodales, metus sit amet condimentum malesuada, ligula est luctus nisl, pulvinar sodales lacus enim et purus. Etiam vel dui maximus, lobortis quam ac, eleifend diam. Donec quis massa vitae ipsum egestas congue. Sed suscipit quis neque ut mattis. Maecenas luctus augue et aliquam fringilla. Fusce non iaculis est. Vestibulum scelerisque orci ac blandit pellentesque. Etiam et erat mattis, egestas nisl non, faucibus turpis. Fusce a ligula mattis, aliquam erat sed, ornare nisl. Sed ultricies nulla eu lacus dapibus pulvinar. Phasellus sit amet mi quis ex tempus accumsan ut et lacus. Morbi at scelerisque tortor. Aenean porta semper augue nec aliquam.</p>
+        </article>
+        <article class="bio">
+          <img class="bio-image" src="images/brianbio.jpg" alt="">
+          <h1>Brian Workman</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nibh. Aliquam hendrerit lacus at felis vulputate sollicitudin. Quisque sodales, metus sit amet condimentum malesuada, ligula est luctus nisl, pulvinar sodales lacus enim et purus. Etiam vel dui maximus, lobortis quam ac, eleifend diam. Donec quis massa vitae ipsum egestas congue. Sed suscipit quis neque ut mattis. Maecenas luctus augue et aliquam fringilla. Fusce non iaculis est. Vestibulum scelerisque orci ac blandit pellentesque. Etiam et erat mattis, egestas nisl non, faucibus turpis. Fusce a ligula mattis, aliquam erat sed, ornare nisl. Sed ultricies nulla eu lacus dapibus pulvinar. Phasellus sit amet mi quis ex tempus accumsan ut et lacus. Morbi at scelerisque tortor. Aenean porta semper augue nec aliquam.</p>
+        </article>
+        <article class="bio">
+          <img class="bio-image" src="images/brianbio.jpg" alt="">
+          <h1>Jay Balderas</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nibh. Aliquam hendrerit lacus at felis vulputate sollicitudin. Quisque sodales, metus sit amet condimentum malesuada, ligula est luctus nisl, pulvinar sodales lacus enim et purus. Etiam vel dui maximus, lobortis quam ac, eleifend diam. Donec quis massa vitae ipsum egestas congue. Sed suscipit quis neque ut mattis. Maecenas luctus augue et aliquam fringilla. Fusce non iaculis est. Vestibulum scelerisque orci ac blandit pellentesque. Etiam et erat mattis, egestas nisl non, faucibus turpis. Fusce a ligula mattis, aliquam erat sed, ornare nisl. Sed ultricies nulla eu lacus dapibus pulvinar. Phasellus sit amet mi quis ex tempus accumsan ut et lacus. Morbi at scelerisque tortor. Aenean porta semper augue nec aliquam.</p>
+        </article>
       </section>
     </main>
     <footer>
@@ -55,14 +109,12 @@
     <script src="./vendors/scripts/page.js"></script>
 
     <script src="./scripts/model/gameModel.js"></script>
-
-    <script src="./scripts/view/aboutView.js"></script>
     <script src="./scripts/view/gameView.js"></script>
     <script src="./scripts/view/indexView.js"></script>
 
     <script src="./scripts/controller/aboutController.js"></script>
     <script src="./scripts/controller/gameController.js"></script>
     <script src="./scripts/controller/indexController.js"></script>
-    <!-- <script src="./scripts/controller/route.js"></script> -->
+    <script src="./scripts/controller/route.js"></script>
   </body>
 </html>
