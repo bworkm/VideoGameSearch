@@ -18,7 +18,7 @@
     <script id="game-info-template" type="text/x-handlebars-template">
       <article class="hidden" id="{{game_id}}">
         <h3>This is {{name}}</h3>
-        <div>{{description}}</div>
+        <span>{{description}}</span>
         <img src=`https:{{image}}`>
       </article>
     </script>
@@ -41,8 +41,16 @@
       <section id="page-lower" class="page-lower">
         <ul id="top-games" class="top-games">
           <h2>Top Games</h2>
+          <li id="217270">
+            <a href="/gameview/217270"><img class="game-thumb" src="thumbnail">
+            <h3>Game 1</h3></a>
+          </li>
+          <li id="120677">
+            <a href="/gameview/120677"><img class="game-thumb" src="thumbnail">
+            <h3>Game 2</h3></a>
+          </li>
         </ul>
-        <div id="game_info" class="game_info">
+        <div id="game-info" class="game-info">
         </div>
       </section>
     </main>
@@ -63,6 +71,6 @@
     <script src="./scripts/controller/aboutController.js"></script>
     <script src="./scripts/controller/gameController.js"></script>
     <script src="./scripts/controller/indexController.js"></script>
-    <!-- <script src="./scripts/controller/route.js"></script> -->
+    <script src="./scripts/controller/route.js"></script>
   </body>
 </html>

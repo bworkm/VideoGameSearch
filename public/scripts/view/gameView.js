@@ -3,15 +3,26 @@
 (function(module) {
   const gameView = {};
 
-  gameView.initIndexPage = () => {
-    $('#game_info').show().siblings().hide();
 
+  gameView.displayArticles = () => {
+    $('#top-games li').on('click', (e) => {
+      console.log($(e.target).parent().parent(),'parent of parent');
+      $('#game-info').show().siblings().hide();
+      let id = $(e.target).parent().parent().attr('id');
+      // $(e.target).parent().parent().removeClass();
+      console.log(('#' + id), 'full id');
+      $('article#' + id).removeClass('hidden');
+    })
+  };
+
+  gameView.initIndexPage = () => {
     Game.allGames.forEach(gameItem => {
-      // if (gameItem.game_id === id) {
-        $('#game_info').append(gameItem.toHtml('#game-info-template'));
-      // }
+      $('#game-info').append(gameItem.toHtml('#game-info-template')).hide();
     });
   };
+
+  gameView.initIndexPage();
+  gameView.displayArticles();
 
   module.gameView = gameView;
 })(window);
