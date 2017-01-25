@@ -88,7 +88,7 @@ app.get('/game/all', function(request, response) {
   })
 });
 
-app.get('*', (request, response) => {
+app.get('/about', (request, response) => {
   response.sendFile('index.html', {root: './public'});
 });
 
