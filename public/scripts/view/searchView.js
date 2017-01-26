@@ -4,14 +4,14 @@
   const searchView = {}
 
   searchView.displaySearchResults = (data) => {
-    let template = Handlebars.compile($('#top-games-template').html());
+    let template = Handlebars.compile($('#top-games-template').html()); //eslint-disable-line
 
     $('.top-games-li').remove();
 
-    $('#index').append(Game.allGames.filter((item) => {
+    $('#index').append(Game.allGames.filter((item) => { //eslint-disable-line
       if (item.name.toLowerCase().indexOf(data.toLowerCase()) >= 0) {
         return true;
-      };
+      }
     })
     .map(template));
 

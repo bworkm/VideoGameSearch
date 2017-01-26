@@ -1,18 +1,12 @@
 #hero-img {
-  /*border: 1px solid green;*/
   width: 100%;
   height: 50vh;
     overflow: hidden;
   z-index: -1;
 }
 
-/*.flexslider{
-  clear: both;
-
-}*/
 .page-lower {
   height: auto;
-  /*border: 1px solid red;*/
   text-align: center;
 
 }
@@ -31,10 +25,6 @@
 }
 .icon-menu {
   font-size: 2em;
-  /*bottom: 1.1em;
-  right: 0.2em;*/
-  /*float: right;*/
-  /*position: relative;*/
 }
 .page-lower h2 {
   font-size: 24pt;
