@@ -11,23 +11,56 @@
 
 }*/
 
-footer{
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-}
 
-.footer {
-    background: blue;
-    height: 50px;
-    margin: auto;
-    width: 100%;
-    text-align:center;
-    padding:10px;
-    color:#ffffff;
-}
+
 .main-body{
   width: 100%;
+}
+.image-container {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 20%;
+    /*height: 100%;*/
+    text-align: center;
+    background-image: url("http://i.imgur.com/ky8LT0D.png");
+    overflow:scroll;
+}
+.image-container img{
+  margin-top: 20%;
+  max-height: 60vh;
+}
+
+#game-image {
+    max-width:100%;
+    max-height:100%;
+    vertical-align: middle;
+}
+.game-info {
+line-height: 25px;
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 14px;
+  background-image: url("https://i.ytimg.com/vi/aBBwqpBGeq0/maxresdefault.jpg");
+
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*overflow: scroll;*/
+
+}
+.game-info p{
+  color: white;
+}
+.game-info h3 {
+  text-align: justify;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: white;
 }
 
 .page-lower {
@@ -123,7 +156,39 @@ footer {
     color: white;
     font-size: 2em;
   }
+  .game-info {
+      /*margin: 10px;
+      max-height: 100%;*/
+      float:left;
+      margin-bottom: 25px;
+      /*overflow: none;*/
 
+  }
+  .game-info p{
+      margin-bottom: 25px;
+      color: white;
+  }
+  .game-info div{
+      margin:0;
+  }
+.image-container{
+  margin-top: 500px;
+}
+  .image-container div img{
+      margin: 5%;
+      max-height: 100%;
+      text-align: center;
+      overflow: none;
+  }
+  .image-container img{
+    margin-top: 0;
+    max-height: 60vh;
+  }
+
+  #game-image {
+    float: left;
+    height: 60vh;
+  }
 
   .page-lower {
     margin-top: 2em;
@@ -148,4 +213,20 @@ footer {
 
 header {
   padding-top: 1em;
+}
+
+footer{
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer {
+  background: black;
+  height: 20px;
+  margin: auto;
+  width: 100%;
+  text-align:center;
+  padding:10px;
+  color:#ffffff;
 }

@@ -31,7 +31,7 @@
     });
     $('#game-info').show().siblings().hide();
     let temp = $('#g' + id);
-    $('#g' + id).removeClass();
+    $('#g' + id).removeClass().addClass('image-container');;
   };
 
   module.gameView = gameView;
