@@ -61,6 +61,7 @@ line-height: 25px;
 .page-lower {
   height: auto;
   text-align: center;
+  margin-bottom: 20px;
 }
 .top-games-li {
   display: list-item;
@@ -179,6 +180,7 @@ footer {
 
   .page-lower {
     margin-top: 2em;
+    margin-bottom: 20px;
   }
   .top-games-li {
     width: 14em;
@@ -203,6 +205,7 @@ header {
 }
 
 footer{
+  margin: 0;
   bottom: 0;
   position: fixed;
   width: 100%;
