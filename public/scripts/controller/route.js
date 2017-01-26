@@ -1,7 +1,7 @@
 'use strict';
 
-page('/', indexController.init);
-page('/about', aboutController.init);
-page('/gameView/:id?', gameController.init);
+page('/', indexController.init); //eslint-disable-line
+page('/about', aboutController.init); //eslint-disable-line
+page('/gameView/:id?', gameController.init); //eslint-disable-line
 
-page();
+page();//eslint-disable-line

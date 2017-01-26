@@ -1,6 +1,5 @@
 'use strict';
 
-//vars from Jay Game Cosntructor and Game.all
 (function(module){
 
   function Game(opts){
@@ -8,7 +7,6 @@
   }
 
   Game.allGames = [];
-//vars from Jay Game Cosntructor and Game.all
 
   Game.prototype.insertRecord = function(callback) { //eslint-disable-line
     $.post('/game/insert', {
@@ -28,19 +26,17 @@
     });
   }
   Game.prototype.toHtml = function() {
-    let template = Handlebars.compile($('#game-info-template').html());
+    let template = Handlebars.compile($('#game-info-template').html()); //eslint-disable-line
 
     return template(this);
   }
 
   Game.loadAll = data => {
-    data.forEach(element => {
-      Game.allGames = data.map(ele => new Game(ele));
-    });
+    Game.allGames = data.map(ele => new Game(ele));
   };
 
   Game.fetchAll = (callback, param) => { //eslint-disable-line
-    $.get('/game/all') // Done path not yet defined.
+    $.get('/game/all')
     .then(
       function(results){
         if(results.rows) {
