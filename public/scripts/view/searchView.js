@@ -20,8 +20,10 @@
   }
 
   searchView.setButtonHandler = (callback) => {
+    console.log('initialized');
     $('#btn-search').on('click', (e) => {
-      e.preventDefault();
+      // e.preventDefault();
+      console.log('clicked');
       let data = $('#box-search').val();
       console.log(data, ':box search value');
       callback(data);
