@@ -97,7 +97,7 @@ app.get('/about', (request, response) => {
 });
 
 app.get('/', (request, response) => {
-  responose.sendFile('index.html', {root: './public'});
+  response.sendFile('index.html', {root: './public'});
 });
 
 //***************************************************
