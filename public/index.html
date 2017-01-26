@@ -19,7 +19,7 @@
       <article class="hidden" id="g{{game_id}}">
         <h3>This is {{name}}</h3>
         <span>{{description}}</span>
-        <img src="https://">
+        <img src="https:{{image}}">
       </article>
     </script>
   </head>
@@ -33,12 +33,17 @@
           <ul class="main-nav-list">
             <li class="tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
             <li class="tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
+            <li class="tab" data-content="search"><a href="/search" class="icon-happy">Search</a></li>
           </ul>
         </div>
         <div class="browser-nav">
           <ul>
             <li class="browser-tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
             <li class="browser-tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
+            <li class="browser-tab" data-content="search">
+              <input type="search" id="box-search" class="icon-happy">
+              <input type="button" id="btn-search" value="search">
+            </li>
           </ul>
         </div>
       </nav>
@@ -54,8 +59,8 @@
       </div>
 
       <section id="page-lower" class="page-lower">
+        <h2 id="games-label">Top Games</h2>
         <ul id="index" class="top-games">
-          <h2>Top Games</h2>
         </ul>
       </section>
       <section id="game-info" class="game-info">
@@ -95,6 +100,7 @@
     <script src="/scripts/model/gameModel.js"></script>
     <script src="/scripts/view/gameView.js"></script>
     <script src="/scripts/view/indexView.js"></script>
+    <script src="/scripts/view/searchView.js"></script>
 
     <script src="/scripts/controller/aboutController.js"></script>
     <script src="/scripts/controller/gameController.js"></script>
