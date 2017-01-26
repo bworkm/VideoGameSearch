@@ -25,13 +25,11 @@
   };
 
   gameView.initGamePage = (id) => {
-    if ($('#game-info').children().length === 0) {
-      Game.allGames.forEach(gameItem => {
-        $('#game-info').append(gameItem.toHtml());
-      });
-    }
+    $('#game-info').html('');
+    Game.allGames.forEach(gameItem => {
+      $('#game-info').append(gameItem.toHtml());
+    });
     $('#game-info').show().siblings().hide();
-    // $('#hero-img').show();
     let temp = $('#g' + id);
     $('#g' + id).removeClass();
   };
