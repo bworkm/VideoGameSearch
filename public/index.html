@@ -17,9 +17,14 @@
     </script>
     <script id="game-info-template" type="text/x-handlebars-template">
       <article class="hidden" id="g{{game_id}}">
-        <h3>This is {{name}}</h3>
-        <span>{{description}}</span>
-        <img src="https:{{image}}">
+        <img id="game-image" src="https:{{image}}">
+        <div class"game-name">
+        <h3>This is {{name}}</h3><br>
+        <!-- <p>{{playingTime}}</p><br>
+          <p>{{minPlayers}}</p><br>
+          <p>{{maxPlayers}}</p><br> -->
+          <p>{{description}}</p>
+        </div>
       </article>
     </script>
   </head>
@@ -99,7 +104,9 @@
       </section>
     </main>
     <footer>
+      <div class="footer">
       &copy; 2016 - Brian A. | Brian W. | Braelynn L. | Jay B.
+      </div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

@@ -30,7 +30,10 @@
       $('#game-info').append(gameItem.toHtml());
     });
     $('#game-info').show().siblings().hide();
-    $('#g' + id).removeClass();
+
+    let temp = $('#g' + id);
+    $('#g' + id).removeClass().addClass('image-container');;
+
   };
 
   module.gameView = gameView;
