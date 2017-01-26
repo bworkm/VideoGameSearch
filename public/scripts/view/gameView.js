@@ -20,17 +20,16 @@
     $('#index ').on('click', (e) => {
       e.preventDefault();
       let id = $(e.target).parent().parent().attr('id');
-      page('/gameView/' + id);
+      page('/gameView/' + id); //eslint-disable-line
     });
   };
 
   gameView.initGamePage = (id) => {
     $('#game-info').html('');
-    Game.allGames.forEach(gameItem => {
+    Game.allGames.forEach(gameItem => { //eslint-disable-line
       $('#game-info').append(gameItem.toHtml());
     });
     $('#game-info').show().siblings().hide();
-    let temp = $('#g' + id);
     $('#g' + id).removeClass();
   };
 
