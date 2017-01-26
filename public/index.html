@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <title>Video Game Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="vendors/styles/reset.css">
-    <link rel="stylesheet" href="vendors/styles/icons.css">
-    <link rel="stylesheet" href="styles/base/base.css">
-    <link rel="stylesheet" href="styles/layout/layout.css">
-    <link rel="stylesheet" href="styles/modules/modules.css">
+    <link rel="stylesheet" href="/vendors/styles/reset.css">
+    <link rel="stylesheet" href="/vendors/styles/icons.css">
+    <link rel="stylesheet" href="/styles/base/base.css">
+    <link rel="stylesheet" href="/styles/layout/layout.css">
+    <link rel="stylesheet" href="/styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
       <li id="{{game_id}}" class="top-games-li">
-        <a href="gameview/{{game_id}}"><img class="game-thumb" src="{{thumbnail}}">
+        <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{image}}">
         <h3>{{name}}</h3></a>
       </li>
     </script>
     <script id="game-info-template" type="text/x-handlebars-template">
-      <article class="hidden" id="{{game_id}}">
+      <article class="hidden" id="g{{game_id}}">
         <h3>This is {{name}}</h3>
         <span>{{description}}</span>
         <img src="https://">
@@ -55,9 +55,10 @@
 
       <section id="page-lower" class="page-lower">
         <ul id="index" class="top-games">
+          <h2>Top Games</h2>
         </ul>
-        <div id="game_info" class="game_info">
-        </div>
+      </section>
+      <section id="game-info" class="game-info">
       </section>
       <section id="about" class="page-lower">
         <article class="bio">
@@ -87,17 +88,17 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="./vendors/scripts/jquery.flexslider-min.js"></script>
-    <script src="./vendors/scripts/handlebars.js"></script>
-    <script src="./vendors/scripts/page.js"></script>
+    <script src="/vendors/scripts/jquery.flexslider-min.js"></script>
+    <script src="/vendors/scripts/handlebars.js"></script>
+    <script src="/vendors/scripts/page.js"></script>
 
-    <script src="./scripts/model/gameModel.js"></script>
-    <script src="./scripts/view/gameView.js"></script>
-    <script src="./scripts/view/indexView.js"></script>
+    <script src="/scripts/model/gameModel.js"></script>
+    <script src="/scripts/view/gameView.js"></script>
+    <script src="/scripts/view/indexView.js"></script>
 
-    <script src="./scripts/controller/aboutController.js"></script>
-    <script src="./scripts/controller/gameController.js"></script>
-    <script src="./scripts/controller/indexController.js"></script>
-    <script src="./scripts/controller/route.js"></script>
+    <script src="/scripts/controller/aboutController.js"></script>
+    <script src="/scripts/controller/gameController.js"></script>
+    <script src="/scripts/controller/indexController.js"></script>
+    <script src="/scripts/controller/route.js"></script>
   </body>
 </html>

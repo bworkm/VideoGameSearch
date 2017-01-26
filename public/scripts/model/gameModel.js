@@ -39,13 +39,13 @@
     });
   };
 
-  Game.fetchAll = (callback) => { //eslint-disable-line
+  Game.fetchAll = (callback, param) => { //eslint-disable-line
     $.get('/game/all') // Done path not yet defined.
     .then(
       function(results){
         if(results.rows) {
           Game.loadAll(results.rows); //eslint-disable-line
-          callback();
+          callback(param);
         } else {
           $.get('/bgg/hot')
           .then(data => {
