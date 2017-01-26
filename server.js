@@ -41,17 +41,17 @@ app.post('/game/insert', (request, response) => {
       client.query(
       `INSERT INTO games(name, description, game_id, rank, thumbnail, image, minPlayers, maxPlayers, playingTime)
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);`,
-      [
-        request.body.name,
-        request.body.description,
-        request.body.game_id,
-        request.body.rank,
-        request.body.thumbnail,
-        request.body.image,
-        request.body.minPlayers,
-        request.body.maxPlayers,
-        request.body.playingTime
-      ],
+        [
+          request.body.name,
+          request.body.description,
+          request.body.game_id,
+          request.body.rank,
+          request.body.thumbnail,
+          request.body.image,
+          request.body.minPlayers,
+          request.body.maxPlayers,
+          request.body.playingTime
+        ],
       function(err) {
 
         if (err) console.error(err);
