@@ -2,12 +2,10 @@
 
 (function(module) {
   const collectionController = {};
-  $('#collection').show().siblings().hide();
   collectionController.init = (ctx) => {
-    console.log(ctx.params.user);
-    
-    $.get('https://bgg-json.azurewebsites.net/collection/brials')
-    .then(data => {collectionView.initCollectionPage}) //eslint-disable-line
+    $('#collection').show().siblings().hide();
+    var user = ctx.params.user
+    collectionView.initCollectionPage(user)
   }
 
   // collectionController.init();

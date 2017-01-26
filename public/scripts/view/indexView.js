@@ -14,7 +14,7 @@
     .sort((a,b) => {return a.rank - b.rank})
     .map(template));
     $('#display-all').on('click', displayButton);
-    $('collection-button').on('click, handleCollectionButton');
+    $('#collection-button').on('click', handleCollectionButton);
   }
 
   var displayButton = () => {
@@ -43,7 +43,8 @@
   };
 
   var handleCollectionButton = event => {
-    var user = $('#collection-button').val();
+    var user = $('#collection-search').val();
+    console.log(user);
     page('/collection/' + user)
   }
 
