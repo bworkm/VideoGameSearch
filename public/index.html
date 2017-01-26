@@ -33,7 +33,10 @@
           <ul class="main-nav-list">
             <li class="tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
             <li class="tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
-            <li class="tab" data-content="search"><a href="/search" class="icon-happy">Search</a></li>
+            <li class="browser-tab" data-content="search">
+              <input type="search" id="box-search-ham" class="search">
+              <input type="button" id="btn-search-ham" class="search" value="search">
+            </li>
           </ul>
         </div>
         <div class="browser-nav">
@@ -41,8 +44,8 @@
             <li class="browser-tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
             <li class="browser-tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
             <li class="browser-tab" data-content="search">
-              <input type="search" id="box-search" class="icon-happy">
-              <input type="button" id="btn-search" value="search">
+              <input type="search" id="box-search-fp">
+              <input type="button" id="btn-search-fp" value="search">
             </li>
           </ul>
         </div>
@@ -50,23 +53,18 @@
     </header>
     <main id="hero" class="">
       <div class="flexslider" id="hero-img">
-
-  			  	<ul class="slides">
-  			   	<li style="background-image: url(http://d2rormqr1qwzpz.cloudfront.net/photos/2013/03/19/46153-collection.jpg);" data-stellar-background-ratio="0.5"></li>
-  			   	<li style="background-image: url(https://shopswell-com-prod.s3.amazonaws.com/assets/1e282f01-d864-46f9-9e13-3045de6ce0db/board-games-3.jpg);" data-stellar-background-ratio="0.5"></li>
-  			  	</ul>
+  	  	<ul class="slides">
+  	   	<li style="background-image: url(http://d2rormqr1qwzpz.cloudfront.net/photos/2013/03/19/46153-collection.jpg);" data-stellar-background-ratio="0.5"></li>
+  	   	<li style="background-image: url(https://shopswell-com-prod.s3.amazonaws.com/assets/1e282f01-d864-46f9-9e13-3045de6ce0db/board-games-3.jpg);" data-stellar-background-ratio="0.5"></li>
+  	  	</ul>
       </div>
-
       <section id="page-lower" class="page-lower">
         <h2 id="games-label">Top Games</h2>
-
-        <ul id="index" class="top-games">
-        </ul>
+        <ul id="index" class="top-games"></ul>
         <button id="display-all" name="submit">Display All</button>
       </section>
       <section id="collection"></section>
-      <section id="game-info" class="game-info">
-      </section>
+      <section id="game-info" class="game-info"></section>
       <section id="about" class="page-lower">
         <article class="bio">
           <img class="bio-image" src="images/brianbio.jpg" alt="">

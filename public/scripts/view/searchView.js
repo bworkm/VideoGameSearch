@@ -19,15 +19,21 @@
     $('#index').show().siblings().hide();
   }
 
-  searchView.setButtonHandler = (callback) => {
-    $('#btn-search').on('click', (e) => {
-      e.preventDefault();
-      let data = $('#box-search').val();
-      console.log(data, ':box search value');
+  searchView.setButtonHandlers = (callback) => {
+    $('#btn-search-ham').on('click', (e) => {
+      // e.preventDefault();
+      let data = $('#box-search-ham').val();
+      console.log(data, ': data search-ham');
+      callback(data);
+    });
+    $('#btn-search-fp').on('click', (e) => {
+      // e.preventDefault();
+      let data = $('#box-search-fp').val();
+      console.log(data, ': data search-fp');
       callback(data);
     })
   }
 
-  searchView.setButtonHandler(searchView.displaySearchResults);
+  searchView.setButtonHandlers(searchView.displaySearchResults);
   module.searchView = searchView;
 })(window);
