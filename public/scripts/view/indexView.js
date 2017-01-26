@@ -13,9 +13,21 @@
     })
     .sort((a,b) => {return a.rank - b.rank})
     .map(template));
+    $('#display-all').on('click', displayButton)
   }
 
-  //hero image slider code///////////////
+  displayButton = () => {
+    let template = Handlebars.compile($('#top-games-template').html()); //eslint-disable-line
+
+    $('#index').append(Game.allGames.filter(function(e){ //eslint-disable-line
+      if (e.rank < 0 || e.rank > 13) {
+        return true;
+      }
+    })
+    .map(template));
+    $('#display-all').hide();
+  }
+
   var sliderMain = function() {
     $('#hero .flexslider').flexslider({
       animation: 'fade',
@@ -28,17 +40,6 @@
     });
 
   };
-
-	// var sliderSayings = function() {
-	// 	$('#fh5co-sayings .flexslider').flexslider({
-	// 		animation: "slide",
-	// 		slideshowSpeed: 3000,
-	// 		directionNav: false,
-	// 		controlNav: true,
-	// 		smoothHeight: true,
-	// 		reverse: true
-	//   	});
-	// }
 
   sliderMain();
   module.indexView= indexView;
