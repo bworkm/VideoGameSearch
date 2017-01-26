@@ -14,11 +14,12 @@
       }
     })
     .map(template));
-
-    $('#games-label').text('Search Results');
     $('#index').show().siblings().hide();
-  }
+    $('#games-label').show();
 
+    ($('#index').children().length > 0) ? ($('#games-label').text('Search Results')) : ($('#games-label').text('No Results Found'));
+  }
+  
   searchView.setButtonHandlers = (callback) => {
     $('#btn-search-ham').on('click', (e) => {
       // e.preventDefault();
