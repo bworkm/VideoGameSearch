@@ -31,7 +31,7 @@
       });
     }
     $('#game-info').show().siblings().hide();
-    $('#hero-img').show();
+    // $('#hero-img').show();
     let temp = $('#g' + id);
     $('#g' + id).removeClass();
   };
