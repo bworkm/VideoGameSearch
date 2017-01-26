@@ -26,17 +26,20 @@
   margin-top: 1em;
 }
 .heading-group-h1 > h1 {
-  font-family: fantasy;
+  font-family: 'Bowlby One SC', cursive;
   font-size: 30pt;
 }
 .icon-menu {
   font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+
   /*bottom: 1.1em;
   right: 0.2em;*/
   /*float: right;*/
   /*position: relative;*/
 }
 .page-lower h2 {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 24pt;
   margin: .5em 0;
 }

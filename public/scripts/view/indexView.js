@@ -14,8 +14,8 @@
     })
     .map(template));
 
-    $('#display-all').on('click', displayButton);
-  }
+    $('#display-all').on('click', displayButton)
+    }
 
   displayButton = () => {
     let template = Handlebars.compile($('#top-games-template').html());
@@ -26,6 +26,7 @@
       }
     })
     .map(template));
+
   }
 
   //hero image slider code///////////////
@@ -43,18 +44,7 @@
 
 	};
 
-	// var sliderSayings = function() {
-	// 	$('#fh5co-sayings .flexslider').flexslider({
-	// 		animation: "slide",
-	// 		slideshowSpeed: 3000,
-	// 		directionNav: false,
-	// 		controlNav: true,
-	// 		smoothHeight: true,
-	// 		reverse: true
-	//   	});
-	// }
-
   sliderMain();
-  module.indexView= indexView;
+  module.indexView = indexView;
 
 })(window);
