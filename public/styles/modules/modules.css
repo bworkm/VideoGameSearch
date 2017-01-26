@@ -1,0 +1,16 @@
+.bio-image{
+  float: left;
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.bio {
+  clear: both;
+  margin: 80px auto;
+  width: 80%;
+}
+
+article h1{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
