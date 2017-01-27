@@ -20,8 +20,7 @@
       maxPlayers: this.maxPlayers,
       playingTime: this.playingTime
     })
-    .then(data => {
-      console.log(data);
+    .then(data => { //eslint-disable-line
       if(callback) callback();
     });
   }
@@ -45,12 +44,9 @@
         } else {
           $.get('/bgg/hot')
           .then(data => {
-            console.log(data, 'data var from bgg');
             data.forEach(function(item) {
-              console.log(item.gameId, 'gameId');
               $.get(`/bgg/thing/${item.gameId}`)
               .then(newdata => {
-                console.log(newdata, 'new data');
                 let game = new Game(newdata); //eslint-disable-line
                 game.insertRecord();
               })

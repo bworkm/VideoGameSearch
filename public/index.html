@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
       <li id="{{game_id}}" class="top-games-li">
-        <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{image}}">
+        <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{thumbnail}}">
         <h3>{{name}}</h3></a>
       </li>
     </script>
@@ -66,7 +66,6 @@
       <section id="page-lower" class="page-lower">
         <h2 id="games-label">Top Games</h2>
         <ul id="index" class="top-games"></ul>
-        <button id="display-all" name="submit">Display All</button>
       </section>
       <section id="collection">
       </section>
@@ -94,6 +93,7 @@
         </article>
       </section>
     </main>
+    <div class="tswift"></div>
     <footer>
       <div class="footer">
       &copy; 2016 - Brian A. | Brian W. | Braelynn L. | Jay B.

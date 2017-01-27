@@ -4,7 +4,6 @@
   const aboutController = {};
 
   aboutController.init = () => {
-    console.log('aboutController happened');
     $('#about').fadeIn().siblings().hide();
   }
 

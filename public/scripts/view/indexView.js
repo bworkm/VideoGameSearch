@@ -15,8 +15,8 @@
     })
     .sort((a,b) => {return a.rank - b.rank})
     .map(template));
-    $('#display-all').on('click', displayButton);
-    $('#collection-button').on('click', handleCollectionButton);
+    $('#display-all').off().on('click', displayButton);
+    $('#collection-button').off().on('click', handleCollectionButton);
   }
 
   var displayButton = () => {
@@ -46,32 +46,8 @@
 
   var handleCollectionButton = event => { //eslint-disable-line
     var user = $('#collection-search').val();
-    console.log(user);
-    $('#collection-button').off();
     page('/collection/' + user) //eslint-disable-line
   }
-
-  // for nav bar
-  $('.browser-tab').bind('click', function(event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top -64
-    }, 1500, 'easeInOutExpo');
-    event.preventDefault();
-  });
-
-  $('.tab').bind('click', function(event) {
-    var $anchor = $(this);
-    $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top -64
-    }, 1500, 'easeInOutExpo');
-    event.preventDefault();
-  });
-  $(document).on('click','.navbar-collapse.in',function(e) {
-    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
-        $(this).collapse('hide');
-    }
-  });
 
 
   sliderMain();
