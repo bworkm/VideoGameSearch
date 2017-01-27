@@ -9,22 +9,18 @@
     <link rel="stylesheet" href="/styles/base/base.css">
     <link rel="stylesheet" href="/styles/layout/layout.css">
     <link rel="stylesheet" href="/styles/modules/modules.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <script id="top-games-template" type="text/x-handlebars-template">
-      <li id="{{game_id}}" class="top-games-li">
-        <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{image}}">
-        <h3>{{name}}</h3></a>
-      </li>
+        <li id="{{game_id}}" class="top-games-li">
+          <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{image}}">
+          <h3>{{name}}</h3></a>
+        </li>
     </script>
     <script id="game-info-template" type="text/x-handlebars-template">
       <article class="hidden" id="g{{game_id}}">
-        <img id="game-image" src="https:{{image}}">
-        <div class"game-name">
-        <h3>This is {{name}}</h3><br>
-        <!-- <p>{{playingTime}}</p><br>
-          <p>{{minPlayers}}</p><br>
-          <p>{{maxPlayers}}</p><br> -->
-          <p>{{description}}</p>
-        </div>
+        <h3>This is {{name}}</h3>
+        <span>{{description}}</span>
+        <img src="https:{{image}}">
       </article>
     </script>
   </head>
@@ -38,10 +34,7 @@
           <ul class="main-nav-list">
             <li class="tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
             <li class="tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
-            <li class="browser-tab" data-content="search">
-              <input type="search" id="box-search-ham" class="search">
-              <input type="button" id="btn-search-ham" class="search" value="search">
-            </li>
+            <li class="tab" data-content="search"><a href="/search" class="icon-happy">Search</a></li>
           </ul>
         </div>
         <div class="browser-nav">
@@ -49,8 +42,8 @@
             <li class="browser-tab" data-content="index"><a href="/" class="icon-home">Home</a></li>
             <li class="browser-tab" data-content="about"><a href="/about" class="icon-address-book">About</a></li>
             <li class="browser-tab" data-content="search">
-              <input type="search" id="box-search-fp">
-              <input type="button" id="btn-search-fp" value="search">
+              <input type="search" id="box-search" class="icon-happy">
+              <input type="button" id="btn-search" value="search">
             </li>
           </ul>
         </div>
@@ -58,20 +51,29 @@
     </header>
     <main id="hero" class="">
       <div class="flexslider" id="hero-img">
+
   			  	<ul class="slides">
   			   	<li style="background-image: url(images/heroslide1.jpg);" data-stellar-background-ratio="0.5"></li>
   			   	<li style="background-image: url(images/heroslide2.jpg);" data-stellar-background-ratio="0.5"></li>
             <li style="background-image: url(images/heroslide3.jpeg);" data-stellar-background-ratio="0.5"></li>
   			  	</ul>
       </div>
+
       <section id="page-lower" class="page-lower">
         <h2 id="games-label">Top Games</h2>
-        <ul id="index" class="top-games"></ul>
+    <div id="top-games-slider">
+      <div class="flexslider">
+        <ul id="index" class="top-games slides">
+        </ul>
+      </div>
+    </div>
+
         <button id="display-all" name="submit">Display All</button>
 
       </section>
       <section id="collection"></section>
-      <section id="game-info" class="game-info"></section>
+      <section id="game-info" class="game-info">
+      </section>
       <section id="about" class="page-lower">
         <article class="bio">
           <img class="bio-image" src="images/crop_profile.jpg" alt="">
@@ -96,12 +98,12 @@
       </section>
     </main>
     <footer>
-      <div class="footer">
       &copy; 2016 - Brian A. | Brian W. | Braelynn L. | Jay B.
-      </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="/vendors/scripts/jquery.flexslider-min.js"></script>
     <script src="/vendors/scripts/handlebars.js"></script>
     <script src="/vendors/scripts/page.js"></script>

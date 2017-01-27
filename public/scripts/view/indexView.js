@@ -16,6 +16,7 @@
     .sort((a,b) => {return a.rank - b.rank})
     .map(template));
 
+
     $('#display-all').on('click', displayButton)
 
     }
@@ -31,6 +32,16 @@
     .map(template));
 
     $('#display-all').hide();
+
+    $('#top-games-slider .flexslider').flexslider({
+    animation: "fade",
+    slideshowSpeed: 3000
+    });
+
+    $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    $(window).resize(function(){
+      $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    });
 
   }
 
