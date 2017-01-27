@@ -17,6 +17,7 @@
     .map(template));
     $('#display-all').off().on('click', displayButton);
     $('#collection-button').off().on('click', handleCollectionButton);
+    $('#games-label').text('All Games');
   }
 
   var displayButton = () => {
@@ -28,6 +29,7 @@
       }
     })
     .map(template));
+    $('#games-label').text('All Games');
     $('#display-all').hide();
   }
 
