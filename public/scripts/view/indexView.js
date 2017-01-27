@@ -35,14 +35,25 @@
     $('#display-all').hide();
 
     $('#top-games-slider .flexslider').flexslider({
-    animation: "fade",
-    slideshowSpeed: 3000
+			animation: "slide",
+			slideshowSpeed: 3000,
+			directionNav: false,
+			controlNav: true,
+			smoothHeight: true,
+			reverse: true
     });
 
-    $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
-    $(window).resize(function(){
-      $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
-    });
+
+
+    // $('#top-games-slider .flexslider').flexslider({
+    // animation: "fade",
+    // slideshowSpeed: 3000
+    // });
+    //
+    // $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    // $(window).resize(function(){
+    //   $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    // });
 
   }
 
