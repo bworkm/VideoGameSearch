@@ -1,8 +1,55 @@
 .hidden {
   display: none;
 }
-header, nav{
-  background-color: #000;
-  color: white;
+body{
+  background-image: url("http://www.dudaite.com/i/2016/12/board-games-wallpapers-full-hd.jpg");
 
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header, nav{
+  color: white;
+}
+header {
+  padding-top: 1em;
+  background-image: url("https://test.csswg.org/source/work-in-progress/hixie/css3-color/mozilla-opacity-black-0.5-0.0-h.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  position: relative;;
+  bottom: 0;
+}
+header {
+  padding-top: 1em;
+}
+
+article h1{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+footer{
+  margin: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+button{
+  background-color: gray;
+  font-size: 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
 }

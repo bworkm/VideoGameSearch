@@ -50,6 +50,29 @@
     page('/collection/' + user) //eslint-disable-line
   }
 
+  // for nav bar
+  $('.browser-tab').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top -64
+    }, 1500, 'easeInOutExpo');
+    event.preventDefault();
+  });
+
+  $('.tab').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top -64
+    }, 1500, 'easeInOutExpo');
+    event.preventDefault();
+  });
+  $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+  });
+
+
   sliderMain();
   module.indexView= indexView;
 
