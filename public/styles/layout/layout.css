@@ -10,7 +10,25 @@
   max-height:100%;
   vertical-align: middle;
 }
+#det{
+  font-weight: bold;
+  font-size: 20px;
+}
+#display-all{
+  margin: 1%;
+}
+#games-label{
+  color: white;
+}
+.top-games{
+    background-image: url("http://i.imgur.com/ky8LT0D.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5%;
 
+}
 .main-body{
   width: 100%;
 }
@@ -47,10 +65,11 @@ line-height: 25px;
   color: white;
 }
 .game-info h3 {
-  text-align: justify;
+  text-align: center;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 30px;
+  margin-top: 10px;
   margin-bottom: 5px;
   color: white;
 }
@@ -58,7 +77,8 @@ line-height: 25px;
 .page-lower {
   height: auto;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 35px;
+
 }
 .top-games-li {
   display: list-item;
@@ -79,6 +99,12 @@ line-height: 25px;
 .page-lower h2 {
   font-size: 24pt;
   margin: .5em 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: .5em;
+  padding-top: .5em;
+
+
 }
 .top-games {
   margin: 0 auto;
@@ -122,6 +148,7 @@ line-height: 25px;
     display: block;
     margin: 10px 0 0 0;
     padding-bottom: 1em;
+    max-height: 40px;
   }
   .browser-nav > ul {
     text-align: center;
@@ -142,14 +169,15 @@ line-height: 25px;
       margin-bottom: 25px;
   }
   .game-info p{
-      margin-bottom: 25px;
+      margin-bottom: 2px;
       color: white;
   }
   .game-info div{
       margin:0;
   }
 .image-container{
-  margin-top: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
   .image-container div img{
       margin: 5%;
@@ -168,7 +196,7 @@ line-height: 25px;
   }
 
   .page-lower {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
   .top-games-li {
     width: 14em;
