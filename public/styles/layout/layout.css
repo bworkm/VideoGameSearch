@@ -1,17 +1,25 @@
+a:link {
+  text-decoration:  none;
+}
+
+a:visited {
+  text-decoration:  none;
+}
+
 header {
   padding-top: 1em;
 }
 #hero-img {
   width: 100%;
   height: 50vh;
-    overflow: hidden;
+  overflow: hidden;
   z-index: -1;
 }
 
 #top-games-slider {
   width: 100%;
   height: 50vh;
-    overflow: hidden;
+  overflow: hidden;
   z-index: -1;
 }
 
@@ -19,26 +27,26 @@ header {
   width: 100%;
 }
 .image-container {
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 20%;
-    /*height: 100%;*/
-    text-align: center;
-    background-image: url("http://i.imgur.com/ky8LT0D.png");
-    overflow:scroll;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 20%;
+  /*height: 100%;*/
+  text-align: center;
+  background-image: url("http://i.imgur.com/ky8LT0D.png");
+  overflow:scroll;
 }
+
 .image-container img{
   margin-top: 20%;
   max-height: 60vh;
 }
-
-
 
 #game-image {
     max-width:100%;
     max-height:100%;
     vertical-align: middle;
 }
+
 .game-info {
   line-height: 25px;
   max-width: 100%;
@@ -52,12 +60,12 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*overflow: scroll;*/
-
 }
+
 .game-info p{
   color: white;
 }
+
 .game-info h3 {
   text-align: justify;
   font-family: sans-serif;
@@ -81,7 +89,7 @@ header {
   margin-top: 1em;
 }
 .heading-group-h1 > h1 {
-  font-family: fantasy;
+  font-family: 'Bowlby One SC', cursive;
   font-size: 30pt;
 }
 .icon-menu {
@@ -89,6 +97,7 @@ header {
   width: 20px;
 }
 .page-lower h2 {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 24pt;
   margin: .5em 0;
 }
@@ -98,55 +107,97 @@ header {
 .game-thumb {
   width: 100%;
 }
+
+.caption {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 16pt;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  line-height: 1.1em;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+a:hover .caption {
+  opacity: 1;
+  -webkit-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
 .top-games-li h3 {
   position: relative;
   bottom: 2em;
   font-size: 14pt;
   height: 0;
 }
+
 footer {
   margin-top: 2em;
   margin-bottom: 1em;
   position: relative;;
   bottom: 0;
 }
+
 .tab{
   margin: 5px 0 0 0;
 }
+
 .tab a{
   text-decoration: none;
   color: white;
   font-size: 1em;
 }
+
 .icon-menu ul{
   display: none;
 }
+
 .icon-menu:hover ul{
   display: inline;
 }
+
 .browser-nav{
   display: none;
+  font-family: 'Ubuntu', sans-serif;
 }
+
 .search {
   padding: 0;
 }
+
 @media only screen and (min-width: 640px) {
+
   .icon-menu {
     display: none;
   }
+
   .browser-nav{
     display: block;
     margin: 10px 0 0 0;
     padding-bottom: 1em;
   }
+
   .browser-nav > ul {
     text-align: center;
   }
+
   .browser-tab{
     display: inline;
     margin-left: 5%;
     margin-right: 5%;
   }
+
   .browser-tab a{
     text-decoration: none;
     color: white;
@@ -154,30 +205,31 @@ footer {
   }
 
   .game-info {
-      /*margin: 10px;
-      max-height: 100%;*/
-      float:left;
-      margin-bottom: 25px;
-      /*overflow: none;*/
+    float:left;
+    margin-bottom: 25px;
+  }
 
-  }
   .game-info p{
-      margin-bottom: 25px;
-      color: white;
+    margin-bottom: 25px;
+    color: white;
   }
+
   .game-info div{
-      margin:0;
+    margin:0;
   }
-.image-container{
-  margin-top: 500px;
-}
+
+  .image-container{
+    margin-top: 500px;
+  }
+
   .image-container div img{
-      margin: 5%;
-      max-height: 100%;
-      text-align: center;
-      overflow: none;
+    margin: 5%;
+    max-height: 100%;
+    text-align: center;
+    overflow: none;
   }
-  .image-container img{
+
+  .image-container img {
     margin-top: 0;
     max-height: 60vh;
   }

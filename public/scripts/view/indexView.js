@@ -33,27 +33,27 @@
     .map(template));
 
     $('#display-all').hide();
-
-    $('#top-games-slider .flexslider').flexslider({
-      animation: "slide",
-      animationLoop: false,
-      selector: ".slides > li",
-      directionNav: true,
-      touch: true,
-      keyboard: true,
-      itemWidth: 100,
-      itemMargin: 5,
-      minItems: 2,
-      maxItems: 4
-    });
-
-    $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
-    $(window).resize(function(){
-      $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
-    });
-
-    $('.flex-control-nav').remove();
-
+    // 
+    // var $window = $(window),
+    //  flexslider = { vars:{} };
+    //
+    //
+    // $('#top-games-slider .flexslider').flexslider({
+    //   animation: "slide",
+    //   controlNav: true,
+    //   animationLoop: false,
+    //   slideshow: false,
+    //   itemWidth: 210,
+    //   itemMargin: 5,
+    //   asNavFor: '#slider'
+    // });
+    //
+    // $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    // $(window).resize(function(){
+    //   $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    // });
+    //
+    // $('.flex-control-nav').remove();
 
 
     // $('#top-games-slider .flexslider').flexslider({
@@ -70,15 +70,15 @@
 
   var sliderMain = function() {
 
-	  	$('#hero .flexslider').flexslider({
+    $('#hero .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 3000
-	  	});
+    });
 
-	  	$('#hero .flexslider .slides > li').css('height', $(window).height());
-	  	$(window).resize(function(){
-	  		$('#hero .flexslider .slides > li').css('height', $(window).height());
-	  	});
+    $('#hero .flexslider .slides > li').css('height', $(window).height());
+    $(window).resize(function(){
+      $('#hero .flexslider .slides > li').css('height', $(window).height());
+    });
 
 	};
 

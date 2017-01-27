@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Video Game Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Ubuntu:300" rel="stylesheet">
     <link rel="stylesheet" href="/vendors/styles/reset.css">
     <link rel="stylesheet" href="/vendors/styles/icons.css">
     <link rel="stylesheet" href="/styles/base/base.css">
@@ -11,8 +12,9 @@
     <link rel="stylesheet" href="/styles/modules/modules.css">
     <script id="top-games-template" type="text/x-handlebars-template">
         <li id="{{game_id}}" class="top-games-li">
-          <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{image}}">
-          <h3>{{name}}</h3></a>
+          <a href="/gameview/{{game_id}}">
+            <img class="game-thumb" src="{{image}}">
+          <h3 class="caption">{{name}}</h3></a>
         </li>
     </script>
     <script id="game-info-template" type="text/x-handlebars-template">
@@ -60,15 +62,9 @@
 
       <section id="page-lower" class="page-lower">
         <h2 id="games-label">Top Games</h2>
-    <div id="top-games-slider">
-      <div class="flexslider">
-        <ul id="index" class="top-games slides">
-        </ul>
-      </div>
-    </div>
-
+          <ul id="index" class="top-games slides">
+          </ul>
         <button id="display-all" name="submit">Display All</button>
-
       </section>
       <section id="collection"></section>
       <section id="game-info" class="game-info"></section>
