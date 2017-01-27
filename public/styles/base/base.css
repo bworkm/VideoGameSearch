@@ -15,7 +15,7 @@ header, nav{
 }
 header {
   padding-top: 1em;
-  background-image: url("https://test.csswg.org/source/work-in-progress/hixie/css3-color/mozilla-opacity-black-0.5-0.0-h.png");
+  background-color: black;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

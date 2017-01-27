@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Video Game Search</title>
+    <title>Board Game Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/vendors/styles/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Ubuntu:300" rel="stylesheet">
     <link rel="stylesheet" href="/vendors/styles/icons.css">
     <link rel="stylesheet" href="/styles/base/base.css">
     <link rel="stylesheet" href="/styles/layout/layout.css">
@@ -12,7 +13,7 @@
     <script id="top-games-template" type="text/x-handlebars-template">
       <li id="{{game_id}}" class="top-games-li">
         <a href="/gameview/{{game_id}}"><img class="game-thumb" src="{{thumbnail}}">
-        <h3>{{name}}</h3></a>
+        <h3 class="caption">{{name}}</h3></a>
       </li>
     </script>
     <script id="game-info-template" type="text/x-handlebars-template">
@@ -31,7 +32,7 @@
   <body>
     <header>
       <section class="heading-group-h1">
-        <h1>Where's Waldo</h1>
+        <h1>Board Game Search</h1>
       </section>
       <nav class="main-nav">
         <div class="icon-menu">
@@ -59,8 +60,9 @@
     <main id="hero" class="">
       <div class="flexslider" id="hero-img">
   	  	<ul class="slides">
-  	   	<li style="background-image: url(http://d2rormqr1qwzpz.cloudfront.net/photos/2013/03/19/46153-collection.jpg);" data-stellar-background-ratio="0.5"></li>
-  	   	<li style="background-image: url(https://shopswell-com-prod.s3.amazonaws.com/assets/1e282f01-d864-46f9-9e13-3045de6ce0db/board-games-3.jpg);" data-stellar-background-ratio="0.5"></li>
+          <li style="background-image: url(images/heroslide1.jpg);" data-stellar-background-ratio="0.5"></li>
+          <li style="background-image: url(images/heroslide2.jpg);" data-stellar-background-ratio="0.5"></li>
+          <li style="background-image: url(images/heroslide3.jpeg);" data-stellar-background-ratio="0.5"></li>
   	  	</ul>
       </div>
       <section id="page-lower" class="page-lower">
@@ -72,9 +74,9 @@
       <section id="game-info" class="game-info"></section>
       <section id="about" class="page-lower">
         <article class="bio">
-          <img class="bio-image" src="images/brianbio.jpg" alt="">
+          <img class="bio-image" src="images/crop_profile.jpg" alt="">
           <h1>Brae L.</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu vehicula nibh. Aliquam hendrerit lacus at felis vulputate sollicitudin. Quisque sodales, metus sit amet condimentum malesuada, ligula est luctus nisl, pulvinar sodales lacus enim et purus. Etiam vel dui maximus, lobortis quam ac, eleifend diam. Donec quis massa vitae ipsum egestas congue. Sed suscipit quis neque ut mattis. Maecenas luctus augue et aliquam fringilla. Fusce non iaculis est. Vestibulum scelerisque orci ac blandit pellentesque. Etiam et erat mattis, egestas nisl non, faucibus turpis. Fusce a ligula mattis, aliquam erat sed, ornare nisl. Sed ultricies nulla eu lacus dapibus pulvinar. Phasellus sit amet mi quis ex tempus accumsan ut et lacus. Morbi at scelerisque tortor. Aenean porta semper augue nec aliquam.</p>
+          <p>Brae hates writing bios.</p>
         </article>
         <article class="bio">
           <img class="bio-image" src="images/brianbio.jpg" alt="">
