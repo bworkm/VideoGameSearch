@@ -1,3 +1,5 @@
+'use strict';
+
 (function(module){
 
   const indexView ={};
@@ -13,10 +15,11 @@
     })
     .sort((a,b) => {return a.rank - b.rank})
     .map(template));
-    $('#display-all').on('click', displayButton)
+    $('#display-all').on('click', displayButton);
+    $('#collection-button').on('click', handleCollectionButton);
   }
 
-  displayButton = () => {
+  var displayButton = () => {
     let template = Handlebars.compile($('#top-games-template').html()); //eslint-disable-line
 
     $('#index').append(Game.allGames.filter(function(e){ //eslint-disable-line
@@ -40,6 +43,13 @@
     });
 
   };
+
+  var handleCollectionButton = event => { //eslint-disable-line
+    var user = $('#collection-search').val();
+    console.log(user);
+    $('#collection-button').off();
+    page('/collection/' + user) //eslint-disable-line
+  }
 
   sliderMain();
   module.indexView= indexView;

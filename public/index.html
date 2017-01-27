@@ -68,7 +68,8 @@
         <ul id="index" class="top-games"></ul>
         <button id="display-all" name="submit">Display All</button>
       </section>
-      <section id="collection"></section>
+      <section id="collection">
+      </section>
       <section id="game-info" class="game-info"></section>
       <section id="about" class="page-lower">
         <article class="bio">
@@ -96,6 +97,8 @@
     <footer>
       <div class="footer">
       &copy; 2016 - Brian A. | Brian W. | Braelynn L. | Jay B.
+      <input type="search" id="collection-search">
+      <input type="button" id="collection-button" value="User Collection">
       </div>
     </footer>
 
@@ -103,12 +106,12 @@
     <script src="/vendors/scripts/jquery.flexslider-min.js"></script>
     <script src="/vendors/scripts/handlebars.js"></script>
     <script src="/vendors/scripts/page.js"></script>
-
+    <script src="/scripts/view/collectionView.js"></script>
     <script src="/scripts/model/gameModel.js"></script>
     <script src="/scripts/view/gameView.js"></script>
     <script src="/scripts/view/indexView.js"></script>
     <script src="/scripts/view/searchView.js"></script>
-
+    <script src="/scripts/controller/collectionController.js"></script>
     <script src="/scripts/controller/aboutController.js"></script>
     <script src="/scripts/controller/gameController.js"></script>
     <script src="/scripts/controller/indexController.js"></script>
