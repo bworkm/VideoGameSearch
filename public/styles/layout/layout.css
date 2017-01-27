@@ -1,11 +1,14 @@
-header {
-  padding-top: 1em;
-}
+
 #hero-img {
   width: 100%;
   height: 50vh;
     overflow: hidden;
   z-index: -1;
+}
+#game-image {
+  max-width:100%;
+  max-height:100%;
+  vertical-align: middle;
 }
 
 .main-body{
@@ -15,7 +18,6 @@ header {
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 20%;
-    /*height: 100%;*/
     text-align: center;
     background-image: url("http://i.imgur.com/ky8LT0D.png");
     overflow:scroll;
@@ -25,11 +27,6 @@ header {
   max-height: 60vh;
 }
 
-#game-image {
-    max-width:100%;
-    max-height:100%;
-    vertical-align: middle;
-}
 .game-info {
 line-height: 25px;
   max-width: 100%;
@@ -43,7 +40,7 @@ line-height: 25px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /*overflow: scroll;*/
+
 
 }
 .game-info p{
@@ -61,7 +58,7 @@ line-height: 25px;
 .page-lower {
   height: auto;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 .top-games-li {
   display: list-item;
@@ -95,12 +92,7 @@ line-height: 25px;
   font-size: 14pt;
   height: 0;
 }
-footer {
-  margin-top: 2em;
-  margin-bottom: 1em;
-  position: relative;;
-  bottom: 0;
-}
+
 .tab{
   margin: 5px 0 0 0;
 }
@@ -121,6 +113,7 @@ footer {
 .search {
   padding: 0;
 }
+
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
@@ -145,12 +138,8 @@ footer {
   }
 
   .game-info {
-      /*margin: 10px;
-      max-height: 100%;*/
       float:left;
       margin-bottom: 25px;
-      /*overflow: none;*/
-
   }
   .game-info p{
       margin-bottom: 25px;
@@ -179,8 +168,7 @@ footer {
   }
 
   .page-lower {
-    margin-top: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
   }
   .top-games-li {
     width: 14em;
@@ -200,16 +188,7 @@ footer {
   }
 }
 
-header {
-  padding-top: 1em;
-}
 
-footer{
-  margin: 0;
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-}
 
 .footer {
   background: black;

@@ -6,3 +6,28 @@ header, nav{
   color: white;
 
 }
+header {
+  padding-top: 1em;
+}
+footer {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  position: relative;;
+  bottom: 0;
+}
+header {
+  padding-top: 1em;
+}
+
+article h1{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+footer{
+  margin: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}

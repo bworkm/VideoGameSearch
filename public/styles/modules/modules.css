@@ -6,11 +6,22 @@
 
 .bio {
   clear: both;
-  margin: 80px auto;
-  width: 80%;
+  padding: 10%;
+  /*width: 80%;*/
+  margin: 5%;
+  margin-top: 0;
+  background-image: url("http://www.hixie.ch/tests/adhoc/css/mozilla/opacity/black-0.5-0.0-h.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+  overflow:none;
 }
+#about {
+  background-image: url("http://www.steve-j.co.uk/pamhawkes.co.uk/images/BiographyBG.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
 
-article h1{
-  font-weight: bold;
-  margin-bottom: 10px;
 }
