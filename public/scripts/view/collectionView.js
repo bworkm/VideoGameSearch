@@ -9,6 +9,5 @@
     $.get(`https://bgg-json.azurewebsites.net/collection/${user}`)
     .then(data => {$('#collection').append(JSON.parse(data).map(template))}) //eslint-disable-line
   }
-// $('#collection').append(data.map(template))
   module.collectionView = collectionView;
 })(window);

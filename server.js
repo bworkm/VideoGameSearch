@@ -11,7 +11,6 @@ const conString = process.env.DATABASE_URL || 'postgres://@localhost:5432';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
-//***************************************************
 
 app.post('/game/insert', (request, response) => {
 
@@ -64,7 +63,6 @@ app.post('/game/insert', (request, response) => {
 app.get('/bgg/*', proxyBgg);
 
 function proxyBgg(request,response){
-  console.log('bgg request', request.params[0]);
   (requestProxy({
     url: `https://bgg-json.azurewebsites.net/${request.params[0]}`,
   }))(request, response);
@@ -104,5 +102,4 @@ app.get('/', (request, response) => {
   response.sendFile('index.html', {root: './public'});
 });
 
-//***************************************************
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));

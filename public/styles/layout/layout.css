@@ -17,18 +17,6 @@
 #display-all{
   margin: 1%;
 }
-#games-label{
-  color: white;
-}
-.top-games{
-    background-image: url("http://i.imgur.com/ky8LT0D.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 5%;
-
-}
 .main-body{
   width: 100%;
 }
@@ -103,8 +91,6 @@ line-height: 25px;
   margin-bottom: 0;
   padding-bottom: .5em;
   padding-top: .5em;
-
-
 }
 .top-games {
   margin: 0 auto;
