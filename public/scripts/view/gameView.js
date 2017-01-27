@@ -17,7 +17,7 @@
   // };
 
   gameView.setClickHandler = () => {
-    $('#index ').on('click', (e) => {
+    $('#index li').on('click', (e) => {
       e.preventDefault();
       let id = $(e.target).parent().parent().attr('id');
       page('/gameView/' + id); //eslint-disable-line
