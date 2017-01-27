@@ -1,3 +1,5 @@
+'use strict';
+
 (function(module){
 
   const indexView ={};
@@ -42,10 +44,11 @@
 
   };
 
-  var handleCollectionButton = event => {
+  var handleCollectionButton = event => { //eslint-disable-line
     var user = $('#collection-search').val();
     console.log(user);
-    page('/collection/' + user)
+    $('#collection-button').off();
+    page('/collection/' + user) //eslint-disable-line
   }
 
   sliderMain();
