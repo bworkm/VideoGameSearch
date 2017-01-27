@@ -35,13 +35,24 @@
     $('#display-all').hide();
 
     $('#top-games-slider .flexslider').flexslider({
-			animation: "slide",
-			slideshowSpeed: 3000,
-			directionNav: false,
-			controlNav: true,
-			smoothHeight: true,
-			reverse: true
+      animation: "slide",
+      animationLoop: false,
+      selector: ".slides > li",
+      directionNav: true,
+      touch: true,
+      keyboard: true,
+      itemWidth: 100,
+      itemMargin: 5,
+      minItems: 2,
+      maxItems: 4
     });
+
+    $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    $(window).resize(function(){
+      $('#top-games-slider .flexslider .slides > li').css('height', $(window).height());
+    });
+
+    $('.flex-control-nav').remove();
 
 
 
