@@ -19,18 +19,14 @@
 
     ($('#index').children().length > 0) ? ($('#games-label').text('Search Results')) : ($('#games-label').text('No Results Found'));
   }
-  
+
   searchView.setButtonHandlers = (callback) => {
-    $('#btn-search-ham').on('click', (e) => {
-      // e.preventDefault();
+    $('#btn-search-ham').off().on('click', (e) => { //eslint-disable-line
       let data = $('#box-search-ham').val();
-      console.log(data, ': data search-ham');
       callback(data);
     });
-    $('#btn-search-fp').on('click', (e) => {
-      // e.preventDefault();
+    $('#btn-search-fp').off().on('click', (e) => { //eslint-disable-line
       let data = $('#box-search-fp').val();
-      console.log(data, ': data search-fp');
       callback(data);
     })
   }

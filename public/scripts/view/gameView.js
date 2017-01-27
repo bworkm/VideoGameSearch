@@ -3,21 +3,8 @@
 (function(module) {
   const gameView = {};
 
-  // gameView.displayArticles = function(ctx) {
-  //   // if (!Game.allGames.length) {
-  //   //   console.log('no data in array, populating');
-  //     // gameController.init();
-  //   // }
-  //   console.log('this is displayArticles');
-  //     $('#game-info').show().siblings().hide();
-  //     $('#hero-img').show();
-  //     let temp = $('#g' + ctx.params.id);
-  //     console.log(temp, 'temp');
-  //     $('#g' + ctx.params.id).removeClass();
-  // };
-
   gameView.setClickHandler = () => {
-    $('#index li').on('click', (e) => {
+    $('#index li').off().on('click', (e) => {
       e.preventDefault();
       let id = $(e.target).parent().parent().attr('id');
       page('/gameView/' + id); //eslint-disable-line
@@ -31,8 +18,7 @@
     });
     $('#game-info').show().siblings().hide();
 
-    let temp = $('#g' + id);
-    $('#g' + id).removeClass().addClass('image-container');;
+    $('#g' + id).removeClass().addClass('image-container');
 
   };
 

@@ -15,8 +15,8 @@
     })
     .sort((a,b) => {return a.rank - b.rank})
     .map(template));
-    $('#display-all').on('click', displayButton);
-    $('#collection-button').on('click', handleCollectionButton);
+    $('#display-all').off().on('click', displayButton);
+    $('#collection-button').off().on('click', handleCollectionButton);
   }
 
   var displayButton = () => {
@@ -47,7 +47,6 @@
   var handleCollectionButton = event => { //eslint-disable-line
     var user = $('#collection-search').val();
     console.log(user);
-    $('#collection-button').off();
     page('/collection/' + user) //eslint-disable-line
   }
 

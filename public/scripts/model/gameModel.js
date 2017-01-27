@@ -20,8 +20,7 @@
       maxPlayers: this.maxPlayers,
       playingTime: this.playingTime
     })
-    .then(data => {
-      console.log(data);
+    .then(data => { //eslint-disable-line
       if(callback) callback();
     });
   }
